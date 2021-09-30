@@ -1,0 +1,19 @@
+{
+  "name": "fractional",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivamrajput177/Fractional.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivamrajput177/Fractional/issues"
+  },
+  "homepage": "https://github.com/shivamrajput177/Fractional#readme",
+  "description": ""
+}
