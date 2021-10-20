@@ -1,12 +1,21 @@
-import './App.css';
-import Navbarr from './components/Navbar'
+import React from 'react'
+import Navbar from './components/Navbar'
+import {BrowserRouter, Route,Switch} from 'react-router-dom'
+import Home from './pages/Home'
 
-function App() {
+// Route for various path
+const App = () => {
   return (
-    <div className="App">
-      <Navbarr/>
-    </div>
-  );
+    <BrowserRouter>
+      <Navbar/>
+      <Switch>
+      
+      <Route path='' component={Home} exact />
+      {/* <Route path='/product/:id' component={ProductScreens} /> */}
+
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
