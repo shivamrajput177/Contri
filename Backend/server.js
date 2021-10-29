@@ -1,4 +1,5 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const morgan = require('morgan')
 const dotenv = require('dotenv')
 const cors = require('cors')
@@ -17,11 +18,27 @@ app.use(express.urlencoded());
 
 const PORT = process.env.PORT || 5000
 
+const middlewares = require('./middlewares')
+
+
+
+mongoose.connect(process.env.MONGO_URL,{
+  useNewUrlParser : true,
+  useUnifiedTopology : true,
+}).then(()=>{console.log("Database Connected !! ")})
+.catch((err)=>console.log("Databse Not Connected !!! "))
+
+
 app.get('/',(req,res)=>{
   res.json({
     message:'Home Page',
   })
 })
+
+
+
+app.use(middlewares.urlNotFound)
+app.use(middlewares.statusError)
 
 
 app.listen(
