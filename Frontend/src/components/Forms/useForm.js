@@ -1,10 +1,12 @@
 import {useState,useEffect} from 'react'
 
 
-const useFormIn = (validate) =>{
+const useForm = (validate) =>{
     const [values,setValues] = useState({
         username : '',
+        email : '',
         password : '',
+        password2 : ''
     })
 
     const [errors,setErrors] = useState({})
@@ -17,15 +19,20 @@ const useFormIn = (validate) =>{
             [name] : values
         })
     }
+    const handleSubmitIn = (e) =>{
+        e.preventDefault()
+
+        setErrors(validate(values))
+        setIsSubmitting(true)
+    }
     const handleSubmit = (e) =>{
         e.preventDefault()
 
         setErrors(validate(values))
         setIsSubmitting(true)
     }
-   
 
-    return {handleChange,values,handleSubmit,errors}
+    return {handleChange,values,handleSubmit,handleSubmitIn,errors}
 }
 
-export default useFormIn
+export default useForm

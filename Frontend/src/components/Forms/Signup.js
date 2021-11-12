@@ -2,11 +2,10 @@ import React from 'react'
 import useForm from './useForm'
 import validate from './validation'
 import './Form.css'
-import {Link} from 'react-router-dom'
 
-const Signup = () => {
+const Signup = ({checkRegistered}) => {
 
-    const {handleChange,values,handleSubmit,errors} = useForm(validate)
+    const {handleChange,values,handleSubmit,handleSubmitIn,errors} = useForm(validate)
 
     return (
         <div className = "form-content-right">
@@ -69,7 +68,7 @@ const Signup = () => {
                 </div>
                 {errors.password2 && <p>{errors.password2}</p>}
                 <button className="form-input-btn" type='submit'>Sign Up</button>
-                <span className='form-input-login'>Already have an Account? Login <Link to='/signin'>here </Link> </span>
+                <span className='form-input-login'>Already have an Account? Login <a onClick={checkRegistered}>here </a> </span>
             </form>
         </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Form.css'
-import SucessLogo from '../../assests/img-3.svg'
+import SucessLogo from './../../assests/img-3.svg'
 
 const FormSuccess = () => {
   return (
