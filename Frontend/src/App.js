@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import {BrowserRouter, Route,Switch} from 'react-router-dom'
 import Home from './pages/Home'
-import Form from './components/Forms/Form'
+import Form from './pages/Forms/Form'
 import Footer from './components/Footer/Footer'
 
 // Route for various path

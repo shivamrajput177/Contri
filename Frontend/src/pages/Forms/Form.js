@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
+import { useHistory } from 'react-router'
 import Signup from './Signup'
 import Signin from './Signin'
 import './Form.css'
 import FormSuccess from './FormSuccess'
-import Witch from './../../assests/img-2.svg'
-import { useHistory } from 'react-router'
+import Witch from '../../assests/img-2.svg'
+
 
 const Form = () =>{
 
