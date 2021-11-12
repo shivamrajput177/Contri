@@ -9,12 +9,6 @@ const UserSchema = new Schema({
     password : {
         type : String,
         required : [true,"can't be blank"],
-        match : "^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
-    },
-    password2 : {
-        type : String,
-        required : [true,"can't be blank"],
-        match : "^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
     },
 },{
     timestamps:true,
@@ -23,5 +17,4 @@ const UserSchema = new Schema({
 
 
 
-const UserModal = mongoose.model('UserSchema',UserSchema)
-module.exports = UserModal
+mongoose.model('User',UserSchema)
