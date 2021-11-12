@@ -1,15 +1,15 @@
 import React from 'react'
-import useForm from './useForm'
-import validate from './validation'
+import useFormIn from './useFormIn'
+import validate from './validationIn'
 import './Form.css'
 
-const Signup = () => {
+const Signin = () => {
 
-    const {handleChange,values,handleSubmit,handleSubmitIn,errors} = useForm(validate)
+    const {handleChange,values,handleSubmit,errors} = useFormIn(validate)
 
     return (
         <div className = "form-content-right">
-            <form className="form" onSubmit={handleSubmitIn}>
+            <form className="form" onSubmit={handleSubmit}>
                 <h1>Sign In</h1>
                 <div className="form-inputs">
                     <label htmlFor='username' className="form-label">
@@ -48,4 +48,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default Signin

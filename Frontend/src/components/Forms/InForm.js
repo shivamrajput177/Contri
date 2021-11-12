@@ -1,14 +1,13 @@
 import React,{useState} from 'react'
-import Signup from './Signup'
+import Signin from './Signin'
 import './Form.css'
 import FormSuccess from './FormSuccess'
 import Witch from './../../assests/img-2.svg'
 import { useHistory } from 'react-router'
 
+const InForm = () =>{
 
-const Form = () =>{
-
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted,setIsSubmitted] = useState(false);
 
     function submitForm() {
       setIsSubmitted(true);
@@ -19,7 +18,6 @@ const Form = () =>{
         let path = `/`; 
         history.push(path);
     }
-
     return (
         <div> 
             <div className='form-container'>
@@ -28,14 +26,13 @@ const Form = () =>{
           <img className='form-img' src={Witch} alt='witch' />
         </div>
 
-        {!isSubmitted  ? 
-            <Signup submitForm={submitForm}/>
-            : <FormSuccess/> 
+        {isSubmitted ? 
+          <FormSuccess/>:
+            <Signin submitForm={submitForm} /> 
         }
-
       </div>
         </div>
     )
 }
 
-export default Form
+export default InForm

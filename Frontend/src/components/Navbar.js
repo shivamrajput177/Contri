@@ -43,8 +43,8 @@ export default function Navbar() {
           <a href="/" style={{color:"black",fontSize:"18px"}}>Home</a>
           <a href="/" style={{color:"black",fontSize:"18px"}}>Learn</a>
           <a href="/" style={{color:"black",fontSize:"18px"}}>Company</a>
-          <a href="/" style={{color:"black",fontSize:"18px"}}>Signin</a>
-          <button><a href="/" style={{color:"black",fontSize:"18px"}}>Signup</a></button>
+          <a href="/signin" style={{color:"black",fontSize:"18px"}}>Signin</a>
+          <button><a href="/signup" style={{color:"black",fontSize:"18px"}}>Signup</a></button>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="Burger">
