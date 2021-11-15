@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Form from './components/Forms/Form'
 import InForm from './components/Forms/InForm'
 import Footer from './components/Footer/Footer'
+import PropertyDetails from './pages/Property/PropertyDetails'
 
 // Route for various path
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       
       <Route path = '/signup' component = {Form}/>
       <Route path = '/signin' component = {InForm}/>
+      <Route path = '/propertyname' component = {PropertyDetails}/>
       </Switch>
       <Footer/>
     </BrowserRouter>

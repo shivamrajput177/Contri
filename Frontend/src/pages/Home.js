@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { useHistory } from 'react-router'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -18,11 +19,17 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function FormRow() {
+
+  const history = useHistory();
+  const gotoNextPage = () =>{ 
+    let path = `/propertyname`; 
+    history.push(path);
+}
     return (
       <React.Fragment>
         <Grid item xs={12} md={6} lg={4}>
           <Card sx={{ maxWidth: 345 }} style={{padding:"30px",borderRadius:"30px"}}>
-      <CardActionArea>
+      <CardActionArea onClick={gotoNextPage}>
         <CardMedia
           component="img"
           height="140"
@@ -48,7 +55,8 @@ function FormRow() {
       <CardActions>
       <div color={{display: "flex",
   alignItems: "center",
-  justifyContent: "center"}}>
+  justifyContent: "center",
+  textAlign: "center"}}>
             <Button variant="outlined" color="success">
             Join Waitlist
             </Button>
@@ -58,7 +66,7 @@ function FormRow() {
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
         <Card sx={{ maxWidth: 345 }} style={{padding:"30px",borderRadius:"30px"}}>
-      <CardActionArea>
+      <CardActionArea onClick={gotoNextPage}>
         <CardMedia
           component="img"
           height="140"
@@ -92,7 +100,7 @@ function FormRow() {
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
         <Card sx={{ maxWidth: 345 }} style={{padding:"30px",borderRadius:"30px"}}>
-      <CardActionArea>
+      <CardActionArea onClick={gotoNextPage}>
         <CardMedia
           component="img"
           height="140"
