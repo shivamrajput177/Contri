@@ -7,7 +7,7 @@ const body=require('body-parser')
 
 require('./models/user')
 require('./models/card')
-
+require('./models/propertydetails')
 const app = express()
 
 
@@ -34,6 +34,7 @@ mongoose.connect("mongodb+srv://lama:lama@cluster0.kyxtu.mongodb.net/home?retryW
 
 app.use(require('./routes/auth'))
 app.use(require('./routes/card'))
+app.use(require('./routes/property'))
 
 app.get('/',(req,res)=>{
   res.json({

@@ -20,7 +20,7 @@ const App = () => {
       <Route path = '/signin' component = {InForm}/>
       <Route path = '/propertyname' component = {PropertyDetails}/>
       </Switch>
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
     <Navbar/> 
     </div>
